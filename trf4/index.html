@@ -230,7 +230,7 @@ function main(o, data) {
         .attr("class", "child")
         .call(rect)
       .append("title")
-        .text(function(d) { return d.key + " (" + formatNumber(d.value) + ")"; });
+        .text(function(d) { return d.key + " (" + formatNumber(d.value) + " - " + (((d.value/97)*100).toFixed(2) + "%").replace('.',',') + ")"; });
     children.append("text")
         .attr("class", "ctext")
         .text(function(d) { return d.key; })
@@ -248,7 +248,7 @@ function main(o, data) {
         .text(function(d) { return d.key; });
     t.append("tspan")
         .attr("dy", "1.0em")
-        .text(function(d) { return formatNumber(d.value); });
+        .text(function(d) { return formatNumber(d.value) + " - " + (((d.value/97)*100).toFixed(2) + "%").replace('.',',') + ""; });
     t.call(text);
 
     g.selectAll("rect")
@@ -316,17 +316,18 @@ function main(o, data) {
 
   function name(d) {
     return d.parent
-        ? name(d.parent) + " / " + d.key + " (" + formatNumber(d.value) + ")"
-        : d.key + " (" + formatNumber(d.value) + ")";
+        ? name(d.parent) + " / " + d.key + " (" + formatNumber(d.value) + " - " + (((d.value/97)*100).toFixed(2) + "%").replace('.',',') + ")"
+        : d.key + " (" + formatNumber(d.value) + " - " + (((d.value/97)*100).toFixed(2) + "%").replace('.',',') + ")"
   }
 }
 
 if (window.location.hash === "") {
-    d3.json("dados.json", function(err, res) {
+    d3.json("dados3.json", function(err, res) {
         if (!err) {
-            console.log(res);
             var data = d3.nest().key(function(d) { return d.key; }).key(function(d) { return d.region; }).key(function(d) { return d.subregion; }).entries(res);
-            main({title: "Decisoes do TRF-4 na Lava-Jato"}, {key: "Decisoes TRF-4", values: data});
+            console.log("dunha");
+            console.log(data);
+            main({title: "Decisões do TRF-4 na Lava-Jato"}, {key: "Decisões TRF-4", values: data});
         }
     });
 }
