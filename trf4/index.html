@@ -245,10 +245,23 @@ function main(o, data) {
         .attr("dy", ".75em")
 
     t.append("tspan")
-        .text(function(d) { return d.key; });
+        .text(function(d) { 
+          if ( d.key == "Mantidas" ) {
+            return "Mantidas: decisões da 1º instância mantidas pelo TRF-4"; 
+          }
+          else if ( d.key == "Reformadas") {
+            return "Reformadas: decisões da 1º instância modificadas pelo TRF-4";
+          }
+          else {
+            return d.key;
+          }
+        });
     t.append("tspan")
         .attr("dy", "1.0em")
-        .text(function(d) { return formatNumber(d.value) + " - " + (((d.value/97)*100).toFixed(2) + "%").replace('.',',') + ""; });
+        .text(function(d) { 
+          console.log(d);
+          return formatNumber(d.value) + " - " + (((d.value/97)*100).toFixed(2) + "%").replace('.',',') + ""; 
+        });
     t.call(text);
 
     g.selectAll("rect")
@@ -327,7 +340,7 @@ if (window.location.hash === "") {
             var data = d3.nest().key(function(d) { return d.key; }).key(function(d) { return d.region; }).key(function(d) { return d.subregion; }).entries(res);
             console.log("dunha");
             console.log(data);
-            main({title: "Decisões do TRF-4 na Lava-Jato"}, {key: "Decisões TRF-4", values: data});
+            main({title: "Decisões TRF-4 (97 no total entre o período de 22/09/2015 a 07/11/2017)"}, {key: "Decisões TRF-4", values: data});
         }
     });
 }
