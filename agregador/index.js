@@ -50,7 +50,7 @@ var plota_candidato = function(candidato, d, cor) {
 		     .style("color", "white")
                      .style("background", cor)
                      .style("opacity", .78);
-                       div.html('<div id="nomecandidato" style="display: inline; font-family: Roboto-Bold; font-size: 13px">' + d.Candidato.toUpperCase() + '</div><br/><div id="restotooltip" style="display: inline; font-family: Roboto-Light; font-size: 11px">Instituto:' + d['Instituição'] + "<br/>Intenção de voto:" + d.Porcentagem + "%<br/>Data:" +  formatTime(d.Data) + "</div>")
+                       div.html('<div id="nomecandidato" style="display: inline; font-family: Roboto-Bold; font-size: 13px">' + d.Candidato.toUpperCase() + '</div><br/><div id="restotooltip" style="display: inline; font-family: Roboto-Light; font-size: 11px">Instituto: ' + d['Instituição'] + "<br/>Intenção de voto: " + d.Porcentagem + "%<br/>Data: " +  formatTime(d.Data) + "</div>")
                     .style("left", (d3.event.pageX) + "px")
                  .style("top", (d3.event.pageY - 28) + "px");
                                   })
