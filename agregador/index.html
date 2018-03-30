@@ -35,6 +35,14 @@
 		.checkbox {
   		font-family: Roboto-Light;
 		}
+		.divcheckbox {
+			display: inline-block;
+			    padding-top: 5px;
+			    padding-right: 18px;
+			    padding-bottom: 5px;
+			    padding-left: 18px;
+
+		}
             .line {
               fill: none;
               stroke: steelblue;
@@ -74,26 +82,36 @@
 	<div id="explicacao" style="font-family: Roboto-Light"> Ferramenta permite que pesquisas espontâneas sejam agregadas e mostrem intenções de voto mais próximas da realidade; com o modelo estatístico desenvolvido pelo JOTA, podemos comparar resultados de diferentes institutos de pesquisa </div>
 <br>
 	<div id = "box"></div>
-  <fieldset>
-    <legend>Filtro de Candidatos </legend>
+  <fieldset align="center">
+    <legend>Candidatos </legend>
+    <div class="divcheckbox" style="display: inline-block;">
     <input type="checkbox" class="checkbox" name="Lula" id="lula" checked>
     <label for="checkbox-1"><div style="display: inline-block; background: #E94A34; width: 12px; height: 12px"> </div>Lula     </label>
-
+    </div>
+    <div class="divcheckbox" style="display: inline-block;">
     <input type="checkbox" class="checkbox" name="Jair Bolsonaro" id="bolsonaro" checked>
-
     <label for="checkbox-2"><div style="display: inline-block; background: #3FA06B; width: 12px; height: 12px"></div>Jair Bolsonaro     </label>
+    </div>
+
+    <div class="divcheckbox" style="display: inline-block;">
     <input type="checkbox" class="checkbox" name="Geraldo Alckmin" id="alckmin" checked>
-
     <label for="checkbox-3"><div style="display: inline-block; background: #3399CC; width: 12px; height: 12px"></div>Geraldo Alckmin     </label>
+    </dd>
+
+    <div class="divcheckbox" style="display: inline-block;">
     <input type="checkbox" class="checkbox" name="Ciro Gomes" id="cirogomes">
-
     <label for="checkbox-4"><div style="display: inline-block; background: #FFD445; width: 12px; height: 12px"></div>Ciro Gomes     </label>
+    </div>
 
+    <div class="divcheckbox" style="display: inline-block;">
     <input type="checkbox" class="checkbox" name="Marina Silva" id="marinasilva">
     <label for="checkbox-5"><div style="display: inline-block; background: #F48D53; width: 12px; height: 12px"></div>Marina Silva     </label>
+    </div>
 
+    <div class="divcheckbox" style="display: inline-block;">
     <input type="checkbox" class="checkbox" name="Não sabe/Não respondeu" id="naosabe" checked>
     <label for="checkbox-6"><div style="display: inline-block; background: #9E9C90; width: 12px; height: 12px"></div>Não sabe/Não respondeu     </label>
+    </div>
   </fieldset>
 		<script src="index.js"> </script>
 
