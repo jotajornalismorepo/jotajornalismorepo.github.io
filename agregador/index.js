@@ -113,9 +113,9 @@ d3.csv('base.csv', function(error, data) {
         plota_candidato('Lula', data, "#E94A34");
         plota_candidato('Jair Bolsonaro', data, "#3FA06B");
         plota_candidato('Geraldo Alckmin', data, "#3399CC");
-        plota_candidato('Não sabe/Não respondeu', data, "#F48D53");
-        plota_candidato('Marina Silva', data, "#9E9C90");
-        plota_candidato('Ciro Gomes', data, "#8B4513");
+        plota_candidato('Não sabe/Não respondeu', data, "#9E9C90");
+        plota_candidato('Marina Silva', data, "#F48D53");
+        plota_candidato('Ciro Gomes', data, "#FFD445");
 	apaga_candidato("Ciro Gomes", "hidden");
 	apaga_candidato("Marina Silva","hidden");
   
