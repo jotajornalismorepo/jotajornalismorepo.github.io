@@ -105,7 +105,6 @@
 
     <div class="divcheckbox" style="display: inline-block;">
     <div style="display: inline-block; background: #000000; color: #000000; border-radius: 200px; width: 12px; height: 12px"class="quadradinho"></div><div class="novo_quadradinho"></div>Resultado de uma pesquisa     </label>
-    </dd>
 
   </div>
 <br>
@@ -143,7 +142,30 @@
 
 
 	<div id = "box"></div>
-		<script src="index.js"> </script>
+	
+</div>		
+<div id="jotalogo" style="margin-left: 80%"><img src="logo cinza.svg" allign="right" height="200px" width="200px" ></div>
+</div>		
+
+
+	<br>
+	<br>
+	<div id="resto" style="margin-left: 100px; margin-right: 200px;">
+		<div style="font-family: Roboto-Bold; font-size: 25px; color: #E84B37; display: inline" allign="left" > Metodologia </div>
+		<div style="font-family: Roboto-Light	; font-size: 16px;"> 
+
+<p>Essa prática de agregar pesquisas é pouco comum no Brasil e ficou famosa nos EUA no site de Nate Silver, o FiveThirtyEight, que usa ferramentas estatísticas para analisar eleições. Nos últimos meses, criamos um modelo estatístico próprio para agregar as diferentes pesquisas e mostrar tendências eleitorais. O modelo é bayesiano e usa informações anteriores para aprender a partir dos dados e tentar diminuir o grau de incerteza. Outros modelos feitos por jornalistas e profissionais diversos usam média de pesquisas, mas acreditamos que isso pode inserir distorções nos resultados, por vários motivos. O primeiro é que existem institutos mais confiáveis que outros. Além disso, as amostras são coletadas de forma diferente, usando métodos diferentes e em datas diferentes. Por fim, a inferência bayesiana permite que nosso modelo seja explícito em relação aos pressupostos que estamos assumindo. Ao contrário dos EUA, em que o número de pesquisas é elevado, no Brasil, contamos com poucas, e para isso precisamos fazer algumas considerações para lidar com essa escassez. Seguindo padrões internacionais, nosso agregador usa resultados de pesquisas espontâneas e não estimuladas, por acreditarmos que esses dados tenham mais precisão. </p>
+
+<p>É natural que para este momento, o modelo assuma uma grande incerteza para o futuro. Com a entrada de novas pesquisas, e com a consolidação do cenário eleitoral, com a fim do prazo para inscrição de candidaturas, vamos aprimorar o modelo para que obtenha uma acurácia preditiva maior. </p>
+
+<p>Existe uma chance de que as próprias amostras sejam enviesadas simplesmente por falta de sorte, o que os americanos chamam de luck of the draw. Para lidar com todos esses problemas, montamos uma modelagem estatística para agregar as pesquisas. Usamos resultados de institutos como o Datafolha, Ibope e MDA. Uma das vantagens dessa modelagem é que podemos comparar institutos que utilizam metodologias razoavelmente diferentes e melhorar a acurácia de seus resultados. Para o futuro, com a proximidade das eleições, uma vez que será mais fácil introduzir medidas como o cálculo de “house effects”, acrescentaremos  pesquisas de outros institutos. </p>
+ 
+<p>Nosso agregador usa apenas resultados de pesquisas espontâneas e não estimuladas, para ter mais precisão. Outros modelos misturam pesquisas e arriscam apresentar resultados distorcidos.
+Os valores do agregador diferem de pesquisas individuais justamente porque a modelagem busca diminuir incertezas de amostras específicas e buscar tendências diárias. O agregador aumenta seu poder de precisão conforme mais pesquisas são feitas e incluídas em nossa base. Os resultados apresentados consideram um intervalo de 95% de confiança (margem de erro) de acordo com o calculado no modelo. Os erros não apenas consideram o tamanho da amostra, mas há um acréscimo para lidar com problemas decorrentes de outros tipos de erros, para além do amostral. Além disso, também consideramos a incerteza que existe quando se estima intenção para um tempo posterior ao da realização de uma pesquisa.</p></div>
+	</div>
+<br>
+
+	<script src="index.js"> </script>
 
     </body>
 
